@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Reflection;
 
-namespace MoneyManager
+namespace MoneyManagerModel
 {
     public class ManagerContext : DbContext
     {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Collections.Generic;
 
-namespace MoneyManager
+namespace MoneyManagerModel
 {
     public class User
     {
