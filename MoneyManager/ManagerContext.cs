@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection;
 
 namespace MoneyManager
 {
@@ -9,25 +10,10 @@ namespace MoneyManager
         DbSet<Asset> Assets { get; set; }
         DbSet<Category> Categories { get; set; }
         DbSet<Transaction> Transactions { get; set; }
-    }
 
-    public class User
-    {
-
-    }
-
-    public class Asset
-    {
-
-    }
-
-    public class Category
-    {
-
-    }
-
-    public class Transaction
-    {
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }
