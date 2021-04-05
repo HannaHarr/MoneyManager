@@ -1,28 +1,48 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using MoneyManagerModel;
+using System.Linq;
 
 namespace MoneyManagerDataLayer
 {
     public class UserControl : IControl<User>
     {
+        private ManagerContext manager;
+
+        public UserControl(ManagerContext context)
+        {
+            manager = context;
+        }
+
         public void Create(User obj)
         {
-            throw new NotImplementedException();
+            manager.Users
+                .Add(obj);
+
+            manager.SaveChanges();
         }
 
         public void Delete(User obj)
         {
-            throw new NotImplementedException();
+            manager.Users
+                .Remove(obj);
+
+            manager.SaveChanges();
         }
 
         public User Get(int id)
         {
-            throw new NotImplementedException();
+            return manager.Users
+                .Where(u => u.UserId == id)
+                .FirstOrDefault();
         }
 
         public void Update(User obj)
         {
-            throw new NotImplementedException();
+            manager.Users
+                .Update(obj);
+
+            manager.SaveChanges();
         }
     }
 }
