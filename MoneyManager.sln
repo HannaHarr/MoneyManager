@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerDataLayer", "MoneyModelDataLayer\MoneyManagerDataLayer.csproj", "{365705BA-919F-4CEF-A0F0-08AACA2EE93F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerDataLayer", "MoneyManagerDataLayer\MoneyManagerDataLayer.csproj", "{365705BA-919F-4CEF-A0F0-08AACA2EE93F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerModel", "MoneyManagerModel\MoneyManagerModel.csproj", "{618FB01A-7D4C-4737-BB4E-2AB8D0F46696}"
 EndProject
