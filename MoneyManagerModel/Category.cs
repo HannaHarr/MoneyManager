@@ -7,7 +7,7 @@ namespace MoneyManagerModel
     public class Category
     {
         public int CategoryId { get; set; }
-        public bool Type { get; set; }
+        public bool IsIncome { get; set; }
         public string Name { get; set; }
 
         public int? ParentId { get; set; }
