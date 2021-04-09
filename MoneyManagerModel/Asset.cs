@@ -28,6 +28,8 @@ namespace MoneyManagerModel
 
             builder.HasMany(a => a.Transactions)
                 .WithOne(t => t.Asset);
+
+            builder.HasData(InitialData.Assets);
         }
     }
 }

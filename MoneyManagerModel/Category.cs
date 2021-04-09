@@ -29,6 +29,8 @@ namespace MoneyManagerModel
 
             builder.HasMany(c => c.Transactions)
                 .WithOne(t => t.Category);
+
+            builder.HasData(InitialData.Categories);
         }
     }
 }

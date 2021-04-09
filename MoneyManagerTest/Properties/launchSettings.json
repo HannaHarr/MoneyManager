@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "MoneyManagerModel": {
+    "MoneyManagerTest": {
       "commandName": "Project",
       "workingDirectory": "D:\\Task\\MoneyManager\\MoneyManagerTest"
     }
