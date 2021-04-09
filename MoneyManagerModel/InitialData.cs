@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoneyManagerModel
 {
-    public static class DefaultData
+    public static class InitialData
     {
         public static List<User> GenerateUsers()
         {

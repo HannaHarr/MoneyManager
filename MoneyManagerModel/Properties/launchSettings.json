@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MoneyManagerModel": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\Task\\MoneyManager\\ManagerConsoleApp"
+    }
+  }
+}
