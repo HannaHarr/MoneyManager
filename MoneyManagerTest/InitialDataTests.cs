@@ -4,14 +4,9 @@ using System;
 
 namespace MoneyManagerTest
 {
-    public class Tests
+    [TestFixture]
+    public class InitialDataTests
     {
-        [SetUp]
-        public void Setup()
-        {
-
-        }
-
         [Test]
         public void InitialUserData()
         {

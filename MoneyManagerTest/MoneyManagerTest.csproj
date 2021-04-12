@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoneyManagerDataLayer\MoneyManagerDataLayer.csproj" />
     <ProjectReference Include="..\MoneyManagerModel\MoneyManagerModel.csproj" />
   </ItemGroup>
 

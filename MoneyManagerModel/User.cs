@@ -12,9 +12,18 @@ namespace MoneyManagerModel
         // public decimal Balance { get; set; }
 
         public ICollection<Asset> Assets { get; set; }
+
+        public User(string name, string email)
+        {
+            Name = name;
+            Email = email;
+        }
+
+        public User() { }
     }
 
-    public class UserConfiguration : IEntityTypeConfiguration<User>
+    public class UserConfiguration 
+        : IEntityTypeConfiguration<User>
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {

@@ -19,7 +19,7 @@ namespace MoneyManagerModel
 
         static InitialData()
         {
-            using (var sr = new StreamReader("initial_data.json"))
+            using (var sr = new StreamReader($"{AppDomain.CurrentDomain.BaseDirectory}/initial_data.json"))
             {
                 JsonSerializerOptions options = new JsonSerializerOptions();
                 options.Converters.Add(new DateTimeConverter());

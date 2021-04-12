@@ -18,12 +18,12 @@ namespace MoneyManagerModel
 
         public ManagerContext()
         {
-            // Database.EnsureCreated();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@$"DataSource={Environment.CurrentDirectory}/moneymanager.db");
+            optionsBuilder.UseSqlite(@$"DataSource={AppDomain.CurrentDomain.BaseDirectory}/moneymanager.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

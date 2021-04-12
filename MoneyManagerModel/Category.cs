@@ -15,9 +15,25 @@ namespace MoneyManagerModel
         public ICollection<Category> Children { get; set; }
 
         public ICollection<Transaction> Transactions { get; set; }
+
+        public Category(bool isIncome, string name)
+        {
+            IsIncome = isIncome;
+            Name = name;
+        }
+
+        public Category(bool isIncome, string name, int parentId)
+        {
+            IsIncome = isIncome;
+            Name = name;
+            ParentId = parentId;
+        }
+
+        public Category() { }
     }
 
-    public class CategoryConfiguration : IEntityTypeConfiguration<Category>
+    public class CategoryConfiguration 
+        : IEntityTypeConfiguration<Category>
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {

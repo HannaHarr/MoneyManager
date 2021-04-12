@@ -16,9 +16,23 @@ namespace MoneyManagerModel
 
         public int AssetId { get; set; }
         public Asset Asset { get; set; }
+
+        public Transaction(decimal amount, 
+            DateTime date, string comment,
+            int categoryId, int assetId)
+        {
+            Amount = amount;
+            Date = date;
+            Comment = comment;
+            CategoryId = categoryId;
+            AssetId = assetId;
+        }
+
+        public Transaction() { }
     }
 
-    public class TransactionConfiguration : IEntityTypeConfiguration<Transaction>
+    public class TransactionConfiguration 
+        : IEntityTypeConfiguration<Transaction>
     {
         public void Configure(EntityTypeBuilder<Transaction> builder)
         {
