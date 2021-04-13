@@ -165,10 +165,19 @@ namespace MoneyManagerTest
             Assert.NotNull(user);
         }
 
-        [TestCase(2)]
-        [TestCase(4)]
-        public void DeleteUsersTransactions(int id)
+        [Test]
+        public void DeleteUsersTransactions()
         {
+            var id = 1;
+
+            var transaction = new Transaction(
+                33, DateTime.Now, "Valley of Dreams",
+                2, 2);
+            EntityEntry<Transaction> entity
+                = context.Transactions.Add(transaction);
+            Assert.AreEqual(EntityState.Added, entity.State);
+            context.SaveChanges();
+
             var transactions = context.Transactions
                 .Where(t => (t.Asset.UserId == id &&
                 t.Date.Year == DateTime.Now.Year &&
@@ -176,9 +185,154 @@ namespace MoneyManagerTest
                 .ToList();
 
             Assert.NotNull(transactions);
+            Assert.GreaterOrEqual(transactions.Count, 1);
 
-            context.Transactions.RemoveRange(transactions);
+            foreach (var trans in transactions)
+            {
+                entity = context.Transactions.Remove(trans);
+                Assert.AreEqual(EntityState.Deleted, entity.State);
+            }
+
             context.SaveChanges();
+        }
+
+        [Test]
+        public void GetUserList()
+        {
+            var users = (from user 
+                         in context.Users
+                         orderby user.Name
+                         select new
+                         {
+                             user.UserId,
+                             user.Name,
+                             user.Email
+                         }).ToList();
+
+            Assert.NotNull(users);
+            Assert.GreaterOrEqual(users.Count, 5);
+            Assert.AreEqual(1, users[0].UserId);
+            Assert.AreEqual("Clyde E. Troia", users[0].Name);
+            Assert.AreEqual("ClydeETroia@dayrep.com", users[0].Email);
+        }
+
+        [Test]
+        public void GetCurrentBalance()
+        {
+            var id = 1;
+
+            var user = (from u 
+                        in context.Users
+                        where u.UserId == id
+                        select new 
+                        { 
+                            u.UserId,
+                            u.Name,
+                            u.Email, 
+                            Balance = u.Assets.Sum(u => u.Balance)
+                        }).FirstOrDefault();
+
+            Assert.NotNull(user);
+            Assert.AreEqual("Clyde E. Troia", user.Name);
+            Assert.AreEqual("ClydeETroia@dayrep.com", user.Email);
+            Assert.AreEqual(21033, user.Balance);
+        }
+
+        [Test]
+        public void GetUserAssets()
+        {
+            var id = 1;
+
+            var assets = (from a 
+                          in context.Assets
+                          where a.UserId == id
+                          orderby a.Name
+                          select new
+                          {
+                              a.AssetId,
+                              a.Name,
+                              a.Balance
+                          }).ToList();
+
+            Assert.NotNull(assets);
+            Assert.GreaterOrEqual(assets.Count, 4);
+            Assert.AreEqual(3, assets[0].AssetId);
+            Assert.AreEqual("Bank account", assets[0].Name);
+            Assert.AreEqual(7854, assets[0].Balance);
+        }
+
+        [Test]
+        public void GetUserTransactions()
+        {
+            var id = 1;
+
+            var transactions = (from t
+                               in context.Transactions
+                               where t.Asset.UserId == id
+                               orderby t.Date descending
+                               orderby t.Asset.Name
+                               orderby t.Category.Name
+                               select new
+                               {
+                                   t.TransactionId,
+                                   Asset = t.Asset.Name,
+                                   Category = t.Category.Name,
+                                   ParentCategory = t.Category.Parent.Name,
+                                   t.Amount,
+                                   t.Date,
+                                   t.Comment
+                               }).ToList();
+
+            Assert.NotNull(transactions);
+            Assert.GreaterOrEqual(transactions.Count, 20);
+            Assert.AreEqual("Cash", transactions[0].Asset);
+            Assert.AreEqual("Bonus", transactions[0].Category);
+            Assert.AreEqual(null, transactions[0].ParentCategory);
+            Assert.AreEqual(54, transactions[0].Amount);
+            Assert.AreEqual(new DateTime(2021, 2, 24), transactions[0].Date);
+            Assert.AreEqual("TheaterCompass", transactions[0].Comment);
+        }
+
+        [Test]
+        public void GetTotalValue()
+        {
+            var id = 1;
+            var startDate = new DateTime(2020, 1, 1);
+            var endDate = new DateTime(2021, 1, 1);
+
+            var money = (from t
+                         in context.Transactions
+                         where t.Asset.UserId == id
+                         where (t.Date > startDate && t.Date < endDate)
+                         orderby t.Date
+                         group t by t.Date.Month into obj
+                         select new
+                         {
+                             Income = obj
+                             .AsEnumerable()
+                             .Where(o => o.Category.IsIncome)
+                             .Sum(o => o.Amount),
+                             
+                             Expenses = obj
+                             .Where(o => !o.Category.IsIncome)
+                             .Sum(o => o.Amount),
+                             
+                             Month = obj.Key,
+                             obj.FirstOrDefault().Date.Year
+                         }).ToList();
+
+            Assert.NotNull(money);
+            Assert.GreaterOrEqual(money.Count, 12);
+            Assert.AreEqual(100, money[0].Income);
+            Assert.AreEqual(100, money[0].Expenses);
+            Assert.AreEqual(1, money[0].Month);
+            Assert.AreEqual(2020, money[0].Year);
+        }
+
+        [Test]
+        public void GetTotalAmount()
+        {
+            Assert.Pass();
         }
 
         [TearDown]
