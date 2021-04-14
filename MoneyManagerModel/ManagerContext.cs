@@ -11,20 +11,21 @@ namespace MoneyManagerModel
         public DbSet<Category> Categories { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
-        //public ManagerContext(DbContextOptions options) : base(options)
-        //{
-        //    // Database.EnsureCreated();
-        //}
-
-        public ManagerContext()
+        public ManagerContext(DbContextOptions<ManagerContext> options) 
+            : base(options)
         {
             Database.EnsureCreated();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite(@$"DataSource={AppDomain.CurrentDomain.BaseDirectory}/moneymanager.db");
-        }
+        //public ManagerContext()
+        //{
+        //    Database.EnsureCreated();
+        //}
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlite(@$"DataSource={AppDomain.CurrentDomain.BaseDirectory}/moneymanager.db");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
