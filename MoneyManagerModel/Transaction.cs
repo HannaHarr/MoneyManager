@@ -7,7 +7,7 @@ namespace MoneyManagerModel
     public class Transaction
     {
         public int TransactionId { get; set; }
-        public decimal Amount { get; set; }
+        public int Amount { get; set; }
         public DateTime Date { get; set; }
         public string Comment { get; set; }
 
@@ -17,7 +17,7 @@ namespace MoneyManagerModel
         public int AssetId { get; set; }
         public Asset Asset { get; set; }
 
-        public Transaction(decimal amount, 
+        public Transaction(int amount, 
             DateTime date, string comment,
             int categoryId, int assetId)
         {

@@ -195,7 +195,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 18, 168m, 8, 2, "ChefMusic", new DateTime(2020, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 18, 168m, 18, 2, "ChefMusic", new DateTime(2020, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -205,7 +205,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 97, 789m, 7, 10, "MatCoast", new DateTime(2020, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 97, 789m, 17, 10, "MatCoast", new DateTime(2020, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -215,7 +215,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 77, 499m, 7, 8, "MatCoast", new DateTime(2020, 9, 28, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 77, 499m, 17, 8, "MatCoast", new DateTime(2020, 9, 28, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -225,7 +225,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 57, 766m, 7, 6, "Phamiron", new DateTime(2020, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 57, 766m, 17, 6, "Phamiron", new DateTime(2020, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -235,7 +235,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 37, 752m, 7, 4, "KnightForward", new DateTime(2020, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 37, 752m, 17, 4, "KnightForward", new DateTime(2020, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -245,7 +245,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 17, 977m, 7, 2, "ElementSquare", new DateTime(2021, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 17, 977m, 17, 2, "ElementSquare", new DateTime(2021, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -255,7 +255,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 96, 639m, 6, 10, "Tonlaron", new DateTime(2020, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 96, 639m, 16, 10, "Tonlaron", new DateTime(2020, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -265,7 +265,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 76, 551m, 6, 8, "MatCoast", new DateTime(2020, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 76, 551m, 16, 8, "MatCoast", new DateTime(2020, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -275,7 +275,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 56, 420m, 6, 6, "Larokata", new DateTime(2020, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 56, 420m, 16, 6, "Larokata", new DateTime(2020, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -285,7 +285,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 36, 821m, 6, 4, "ElementSquare", new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 36, 821m, 16, 4, "ElementSquare", new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -295,12 +295,12 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 38, 592m, 8, 4, "SundayTops", new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 38, 592m, 18, 4, "SundayTops", new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 16, 108m, 6, 2, "Tonlaron", new DateTime(2020, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 16, 108m, 16, 2, "Tonlaron", new DateTime(2020, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -315,7 +315,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 80, 24m, 10, 8, "SundayTops", new DateTime(2020, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 80, 24m, 20, 8, "SundayTops", new DateTime(2020, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -325,7 +325,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 60, 599m, 10, 6, "Tonlaron", new DateTime(2020, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 60, 599m, 20, 6, "Tonlaron", new DateTime(2020, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -335,7 +335,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 40, 902m, 10, 4, "ChefMusic", new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 40, 902m, 20, 4, "ChefMusic", new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -345,7 +345,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 20, 388m, 10, 2, "Carouselot", new DateTime(2020, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 20, 388m, 20, 2, "Carouselot", new DateTime(2020, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -355,7 +355,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 99, 1123m, 9, 10, "ElementSquare", new DateTime(2020, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 99, 1123m, 19, 10, "ElementSquare", new DateTime(2020, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -365,7 +365,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 79, 132m, 9, 8, "TheaterCompass", new DateTime(2020, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 79, 132m, 19, 8, "TheaterCompass", new DateTime(2020, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -375,7 +375,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 59, 609m, 9, 6, "ChefMusic", new DateTime(2020, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 59, 609m, 19, 6, "ChefMusic", new DateTime(2020, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -385,7 +385,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 39, 693m, 9, 4, "SnowflakesGem", new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 39, 693m, 19, 4, "SnowflakesGem", new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -395,7 +395,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 19, 294m, 9, 2, "SundayTops", new DateTime(2020, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 19, 294m, 19, 2, "SundayTops", new DateTime(2020, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -405,7 +405,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 98, 706m, 8, 10, "Phamiron", new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 98, 706m, 18, 10, "Phamiron", new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -415,12 +415,12 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 78, 989m, 8, 8, "ChefMusic", new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 78, 989m, 18, 8, "ChefMusic", new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 58, 625m, 8, 6, "KnightForward", new DateTime(2020, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 58, 625m, 18, 6, "KnightForward", new DateTime(2020, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -430,7 +430,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 95, 1166m, 5, 10, "TheaterCompass", new DateTime(2021, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 95, 1166m, 15, 10, "TheaterCompass", new DateTime(2021, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -440,7 +440,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 13, 126m, 3, 2, "SundayTops", new DateTime(2020, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 13, 126m, 13, 2, "SundayTops", new DateTime(2020, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -450,7 +450,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 92, 146m, 2, 10, "KnightForward", new DateTime(2020, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 92, 146m, 12, 10, "KnightForward", new DateTime(2020, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -460,7 +460,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 72, 773m, 2, 8, "Larokata", new DateTime(2020, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 72, 773m, 12, 8, "Larokata", new DateTime(2020, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -470,7 +470,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 52, 614m, 2, 6, "RobustArrakis", new DateTime(2020, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 52, 614m, 12, 6, "RobustArrakis", new DateTime(2020, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -480,7 +480,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 32, 889m, 2, 4, "Tonlaron", new DateTime(2020, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 32, 889m, 12, 4, "Tonlaron", new DateTime(2020, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -490,7 +490,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 12, 448m, 2, 2, "Carouselot", new DateTime(2020, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 12, 448m, 12, 2, "Carouselot", new DateTime(2020, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -500,7 +500,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 91, 1290m, 1, 10, "SundayTops", new DateTime(2020, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 91, 1290m, 11, 10, "SundayTops", new DateTime(2020, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -510,7 +510,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 71, 40m, 1, 8, "ElementSquare", new DateTime(2020, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 71, 40m, 11, 8, "ElementSquare", new DateTime(2020, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -520,7 +520,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 51, 355m, 1, 6, "Phamiron", new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 51, 355m, 11, 6, "Phamiron", new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -530,7 +530,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 31, 969m, 1, 4, "Carouselot", new DateTime(2020, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 31, 969m, 11, 4, "Carouselot", new DateTime(2020, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -540,7 +540,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 11, 54m, 1, 2, "TheaterCompass", new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 11, 54m, 11, 2, "TheaterCompass", new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -550,7 +550,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 33, 819m, 3, 4, "SnowflakesGem", new DateTime(2020, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 33, 819m, 13, 4, "SnowflakesGem", new DateTime(2020, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -560,12 +560,12 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 53, 442m, 3, 6, "Carouselot", new DateTime(2020, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 53, 442m, 13, 6, "Carouselot", new DateTime(2020, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 75, 703m, 5, 8, "Tonlaron", new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 75, 703m, 15, 8, "Tonlaron", new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -575,7 +575,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 55, 264m, 5, 6, "Tonlaron", new DateTime(2020, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 55, 264m, 15, 6, "Tonlaron", new DateTime(2020, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -585,7 +585,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 35, 136m, 5, 4, "Tonlaron", new DateTime(2020, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 35, 136m, 15, 4, "Tonlaron", new DateTime(2020, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -595,7 +595,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 15, 231m, 5, 2, "TheaterCompass", new DateTime(2020, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 15, 231m, 15, 2, "TheaterCompass", new DateTime(2020, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -605,7 +605,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 94, 298m, 4, 10, "ChefMusic", new DateTime(2020, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 94, 298m, 14, 10, "ChefMusic", new DateTime(2020, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -620,12 +620,12 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 74, 674m, 4, 8, "KnightForward", new DateTime(2021, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 74, 674m, 14, 8, "KnightForward", new DateTime(2021, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 54, 955m, 4, 6, "ElementSquare", new DateTime(2020, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 54, 955m, 14, 6, "ElementSquare", new DateTime(2020, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -635,7 +635,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 34, 127m, 4, 4, "KnightForward", new DateTime(2020, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 34, 127m, 14, 4, "KnightForward", new DateTime(2020, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -645,7 +645,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 14, 843m, 4, 2, "KnightForward", new DateTime(2020, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 14, 843m, 14, 2, "KnightForward", new DateTime(2020, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -655,7 +655,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 93, 1273m, 3, 10, "Rokataron", new DateTime(2020, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 93, 1273m, 13, 10, "Rokataron", new DateTime(2020, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -665,7 +665,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 73, 259m, 3, 8, "Rokataron", new DateTime(2021, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 73, 259m, 13, 8, "Rokataron", new DateTime(2021, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Transactions",
@@ -680,7 +680,7 @@ namespace MoneyManagerModel.Migrations
             migrationBuilder.InsertData(
                 table: "Transactions",
                 columns: new[] { "TransactionId", "Amount", "AssetId", "CategoryId", "Comment", "Date" },
-                values: new object[] { 100, 160m, 10, 10, "SnowflakesGem", new DateTime(2020, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 100, 160m, 20, 10, "SnowflakesGem", new DateTime(2020, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified) });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

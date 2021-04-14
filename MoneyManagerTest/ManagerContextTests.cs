@@ -221,15 +221,17 @@ namespace MoneyManagerTest
         {
             var id = 1;
 
-            var user = (from u 
+            var user = (from u
                         in context.Users
                         where u.UserId == id
-                        select new 
-                        { 
+                        select new
+                        {
                             u.UserId,
                             u.Name,
-                            u.Email, 
-                            Balance = u.Assets.Sum(u => u.Balance)
+                            u.Email,
+                            Balance = u.Assets
+                            .Sum(a => a.Balance)
+
                         }).FirstOrDefault();
 
             Assert.NotNull(user);
@@ -269,9 +271,9 @@ namespace MoneyManagerTest
             var transactions = (from t
                                in context.Transactions
                                where t.Asset.UserId == id
-                               orderby t.Date descending
-                               orderby t.Asset.Name
-                               orderby t.Category.Name
+                               orderby t.Date descending, 
+                                       t.Asset.Name, 
+                                       t.Category.Name
                                select new
                                {
                                    t.TransactionId,
@@ -285,12 +287,12 @@ namespace MoneyManagerTest
 
             Assert.NotNull(transactions);
             Assert.GreaterOrEqual(transactions.Count, 20);
-            Assert.AreEqual("Cash", transactions[0].Asset);
-            Assert.AreEqual("Bonus", transactions[0].Category);
+            Assert.AreEqual("Debit cards", transactions[0].Asset);
+            Assert.AreEqual("Salary", transactions[0].Category);
             Assert.AreEqual(null, transactions[0].ParentCategory);
-            Assert.AreEqual(54, transactions[0].Amount);
-            Assert.AreEqual(new DateTime(2021, 2, 24), transactions[0].Date);
-            Assert.AreEqual("TheaterCompass", transactions[0].Comment);
+            Assert.AreEqual(14, transactions[0].Amount);
+            Assert.AreEqual(new DateTime(2021, 2, 17), transactions[0].Date);
+            Assert.AreEqual("ElementSquare", transactions[0].Comment);
         }
 
         [Test]
@@ -300,39 +302,74 @@ namespace MoneyManagerTest
             var startDate = new DateTime(2020, 1, 1);
             var endDate = new DateTime(2021, 1, 1);
 
+            
             var money = (from t
                          in context.Transactions
-                         where t.Asset.UserId == id
-                         where (t.Date > startDate && t.Date < endDate)
+                         where ((t.Asset.UserId == id)
+                               && (t.Date > startDate) 
+                               && (t.Date < endDate))
                          orderby t.Date
-                         group t by t.Date.Month into obj
+                         group t by t.Date.Month into g
                          select new
                          {
-                             Income = obj
-                             .AsEnumerable()
-                             .Where(o => o.Category.IsIncome)
-                             .Sum(o => o.Amount),
-                             
-                             Expenses = obj
-                             .Where(o => !o.Category.IsIncome)
-                             .Sum(o => o.Amount),
-                             
-                             Month = obj.Key,
-                             obj.FirstOrDefault().Date.Year
+                             Month = g.Key,
+                             List = g.ToList(),
+
+                             //Income = (from o
+                             //          in obj
+                             //          where o.Category.IsIncome
+                             //          select o)
+                             //          .AsEnumerable()
+                             //          .Sum(o => o.Amount),
+
+                             //Income = obj
+                             //.Select(o => o)
+                             //.Where(o => o.Category.IsIncome)
+                             //.Sum(o => o.Amount),
+
+                             //Expenses = obj
+                             //.Select(o => o)
+                             //.Where(o => !o.Category.IsIncome)
+                             //.Sum(o => o.Amount),
+
+
                          }).ToList();
+            
 
             Assert.NotNull(money);
-            Assert.GreaterOrEqual(money.Count, 12);
-            Assert.AreEqual(100, money[0].Income);
-            Assert.AreEqual(100, money[0].Expenses);
-            Assert.AreEqual(1, money[0].Month);
-            Assert.AreEqual(2020, money[0].Year);
+            Assert.GreaterOrEqual(money.Count, 9);
+            Assert.AreEqual(3, money[0].Month);
+            //Assert.AreEqual(2020, money[0].Year);
+            //Assert.AreEqual(0, money[0].Income);
+            //Assert.AreEqual(214 + 465, money[0].Expenses);
         }
 
         [Test]
         public void GetTotalAmount()
         {
-            Assert.Pass();
+            var id = 1;
+            var isIncome = false;
+
+            var amount = (from t
+                          in context.Transactions
+                          where ((t.Asset.UserId == id)
+                          && (t.Category.IsIncome == isIncome)
+                          && (t.Category.ParentId == null)
+                          && (t.Date.Year == DateTime.Now.Year)
+                          && (t.Date.Month == DateTime.Now.Month))
+                          group t by t.Category into g
+                          select new
+                          {
+                              Category = g.Key.Name,
+                              //Amount = g.Sum(o => o.Amount)
+
+                          })
+                          //.OrderByDescending(obj => obj.Amount)
+                          //.ThenBy(obj => obj.Category)
+                          .ToList();
+
+            Assert.NotNull(amount);
+            Assert.GreaterOrEqual(amount.Count, 1);
         }
 
         [TearDown]
