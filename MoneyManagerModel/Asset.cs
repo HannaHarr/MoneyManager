@@ -6,16 +6,28 @@ namespace MoneyManagerModel
 {
     public class Asset
     {
-        public int AssetId { get; set; }
-        public string Name { get; set; }
-        public int Balance { get; set; }
+        public int 
+            AssetId { get; set; }
 
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public string 
+            Name { get; set; }
 
-        public ICollection<Transaction> Transactions { get; set; }
+        public int 
+            Balance { get; set; }
 
-        public Asset(string name, int balance, int userId)
+        public int 
+            UserId { get; set; }
+
+        public User 
+            User { get; set; }
+
+        public ICollection<Transaction> 
+            Transactions { get; set; }
+
+        public Asset(
+            string name, 
+            int balance, 
+            int userId)
         {
             Name = name;
             Balance = balance;
@@ -28,7 +40,8 @@ namespace MoneyManagerModel
     public class AssetConfiguration 
         : IEntityTypeConfiguration<Asset>
     {
-        public void Configure(EntityTypeBuilder<Asset> builder)
+        public void Configure(
+            EntityTypeBuilder<Asset> builder)
         {
             builder.Property(a => a.AssetId)
                 .ValueGeneratedOnAdd();

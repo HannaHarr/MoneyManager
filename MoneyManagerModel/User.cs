@@ -6,13 +6,21 @@ namespace MoneyManagerModel
 {
     public class User
     {
-        public int UserId { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+        public int 
+            UserId { get; set; }
 
-        public ICollection<Asset> Assets { get; set; }
+        public string 
+            Name { get; set; }
 
-        public User(string name, string email)
+        public string 
+            Email { get; set; }
+
+        public ICollection<Asset> 
+            Assets { get; set; }
+
+        public User(
+            string name, 
+            string email)
         {
             Name = name;
             Email = email;
@@ -24,7 +32,8 @@ namespace MoneyManagerModel
     public class UserConfiguration 
         : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<User> builder)
+        public void Configure(
+            EntityTypeBuilder<User> builder)
         {
             builder.Property(u => u.UserId)
                 .ValueGeneratedOnAdd();
