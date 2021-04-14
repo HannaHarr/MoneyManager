@@ -302,46 +302,35 @@ namespace MoneyManagerTest
             var startDate = new DateTime(2020, 1, 1);
             var endDate = new DateTime(2021, 1, 1);
 
-            
-            var money = (from t
-                         in context.Transactions
-                         where ((t.Asset.UserId == id)
-                               && (t.Date > startDate) 
-                               && (t.Date < endDate))
-                         orderby t.Date
-                         group t by t.Date.Month into g
-                         select new
-                         {
-                             Month = g.Key,
-                             List = g.ToList(),
 
-                             //Income = (from o
-                             //          in obj
-                             //          where o.Category.IsIncome
-                             //          select o)
-                             //          .AsEnumerable()
-                             //          .Sum(o => o.Amount),
+            var money = context.Transactions.Include(t => t.Category)
+                        .Where(t => (t.Asset.UserId == id)
+                         && (t.Date > startDate)
+                         && (t.Date < endDate))
+                        .OrderBy(t => t.Date)
+                        .AsEnumerable()
+                        .GroupBy(t => t.Date.Month)
+                        .Select(g => new
+                        {
+                            Month = g.Key,
+                            g.First().Date.Year,
+                                
+                            Income = g
+                            .Where(t => t.Category.IsIncome)
+                            .Sum(t => t.Amount),
 
-                             //Income = obj
-                             //.Select(o => o)
-                             //.Where(o => o.Category.IsIncome)
-                             //.Sum(o => o.Amount),
+                            Expenses = g
+                            .Where(t => !t.Category.IsIncome)
+                            .Sum(t => t.Amount)
+                        }).ToList();
 
-                             //Expenses = obj
-                             //.Select(o => o)
-                             //.Where(o => !o.Category.IsIncome)
-                             //.Sum(o => o.Amount),
-
-
-                         }).ToList();
-            
 
             Assert.NotNull(money);
             Assert.GreaterOrEqual(money.Count, 9);
             Assert.AreEqual(3, money[0].Month);
-            //Assert.AreEqual(2020, money[0].Year);
-            //Assert.AreEqual(0, money[0].Income);
-            //Assert.AreEqual(214 + 465, money[0].Expenses);
+            Assert.AreEqual(2020, money[0].Year);
+            Assert.AreEqual(0, money[0].Income);
+            Assert.AreEqual(214 + 465, money[0].Expenses);
         }
 
         [Test]
