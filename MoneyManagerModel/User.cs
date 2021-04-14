@@ -9,7 +9,6 @@ namespace MoneyManagerModel
         public int UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        // public decimal Balance { get; set; }
 
         public ICollection<Asset> Assets { get; set; }
 

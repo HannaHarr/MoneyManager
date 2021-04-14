@@ -303,27 +303,27 @@ namespace MoneyManagerTest
             var endDate = new DateTime(2021, 1, 1);
 
 
-            var money = context.Transactions.Include(t => t.Category)
-                        .Where(t => (t.Asset.UserId == id)
-                         && (t.Date > startDate)
-                         && (t.Date < endDate))
-                        .OrderBy(t => t.Date)
-                        .AsEnumerable()
-                        .GroupBy(t => t.Date.Month)
-                        .Select(g => new
-                        {
-                            Month = g.Key,
-                            g.First().Date.Year,
+            var money = context.Transactions
+                .Include(t => t.Category)
+                .Where(t => (t.Asset.UserId == id)
+                 && (t.Date > startDate)
+                 && (t.Date < endDate))
+                .OrderBy(t => t.Date)
+                .AsEnumerable()
+                .GroupBy(t => t.Date.Month)
+                .Select(g => new
+                {
+                    Month = g.Key,
+                    g.First().Date.Year,
                                 
-                            Income = g
-                            .Where(t => t.Category.IsIncome)
-                            .Sum(t => t.Amount),
+                    Income = g
+                    .Where(t => t.Category.IsIncome)
+                    .Sum(t => t.Amount),
 
-                            Expenses = g
-                            .Where(t => !t.Category.IsIncome)
-                            .Sum(t => t.Amount)
-                        }).ToList();
-
+                    Expenses = g
+                    .Where(t => !t.Category.IsIncome)
+                    .Sum(t => t.Amount)
+                }).ToList();
 
             Assert.NotNull(money);
             Assert.GreaterOrEqual(money.Count, 9);
@@ -339,26 +339,28 @@ namespace MoneyManagerTest
             var id = 1;
             var isIncome = false;
 
-            var amount = (from t
-                          in context.Transactions
-                          where ((t.Asset.UserId == id)
-                          && (t.Category.IsIncome == isIncome)
-                          && (t.Category.ParentId == null)
-                          && (t.Date.Year == DateTime.Now.Year)
-                          && (t.Date.Month == DateTime.Now.Month))
-                          group t by t.Category into g
-                          select new
-                          {
-                              Category = g.Key.Name,
-                              //Amount = g.Sum(o => o.Amount)
-
-                          })
-                          //.OrderByDescending(obj => obj.Amount)
-                          //.ThenBy(obj => obj.Category)
-                          .ToList();
+            var amount = context.Transactions
+                .Include(t => t.Category)
+                .Where(t => (t.Asset.UserId == id)
+                 && (t.Category.IsIncome == isIncome)
+                 && (t.Category.ParentId == null)
+                 && (t.Date.Year == 2020)
+                 && (t.Date.Month == 4))
+                .AsEnumerable()
+                .GroupBy(t => t.Category)
+                .Select(g => new
+                {
+                    Category = g.Key.Name,
+                    Amount = g.Sum(o => o.Amount)
+                })
+                .OrderByDescending(obj => obj.Amount)
+                .ThenBy(obj => obj.Category)
+                .ToList();
 
             Assert.NotNull(amount);
             Assert.GreaterOrEqual(amount.Count, 1);
+            Assert.AreEqual("Social Life", amount[0].Category);
+            Assert.AreEqual(579, amount[0].Amount);
         }
 
         [TearDown]
