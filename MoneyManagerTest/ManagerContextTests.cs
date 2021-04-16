@@ -33,7 +33,7 @@ namespace MoneyManagerTest
                 .Options;
 
             context = new ManagerContext(options);
-            Assert.NotNull(context);
+            // Assert.NotNull(context);
         }
 
         [Test]
