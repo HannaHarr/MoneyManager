@@ -1,0 +1,1304 @@
+{
+  "Users": [
+    {
+      "UserId": 1,
+      "Name": "Clyde E. Troia",
+      "Email": "ClydeETroia@dayrep.com",
+      "Assets": []
+    },
+    {
+      "UserId": 2,
+      "Name": "Daniel D. Fleischer",
+      "Email": "DanielDFleischer@armyspy.com",
+      "Assets": []
+    },
+    {
+      "UserId": 3,
+      "Name": "Richard N. Parsons",
+      "Email": "RichardNParsons@dayrep.com",
+      "Assets": []
+    },
+    {
+      "UserId": 4,
+      "Name": "James L. Ponce",
+      "Email": "JamesLPonce@teleworm.us",
+      "Assets": []
+    },
+    {
+      "UserId": 5,
+      "Name": "Laura J. Bancroft",
+      "Email": "LauraJBancroft@rhyta.com",
+      "Assets": []
+    }
+  ],
+
+  "Assets": [
+    {
+      "AssetId": 1,
+      "Name": "Cash",
+      "Balance": 5246,
+      "UserId": 1,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 2,
+      "Name": "Debit cards",
+      "Balance": 87,
+      "UserId": 1,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 3,
+      "Name": "Bank account",
+      "Balance": 7854,
+      "UserId": 1,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 4,
+      "Name": "Loan",
+      "Balance": 7846,
+      "UserId": 1,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 5,
+      "Name": "Cash",
+      "Balance": 8974,
+      "UserId": 2,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 6,
+      "Name": "Debit cards",
+      "Balance": 987,
+      "UserId": 2,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 7,
+      "Name": "Bank account",
+      "Balance": 568,
+      "UserId": 2,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 8,
+      "Name": "Loan",
+      "Balance": 230495,
+      "UserId": 2,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 9,
+      "Name": "Cash",
+      "Balance": 6575,
+      "UserId": 3,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 10,
+      "Name": "Debit cards",
+      "Balance": 165,
+      "UserId": 3,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 11,
+      "Name": "Bank account",
+      "Balance": 8945,
+      "UserId": 3,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 12,
+      "Name": "Bank account",
+      "Balance": 25778,
+      "UserId": 3,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 13,
+      "Name": "Cash",
+      "Balance": 2656,
+      "UserId": 4,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 14,
+      "Name": "Loan",
+      "Balance": 3526,
+      "UserId": 4,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 15,
+      "Name": "Bank account",
+      "Balance": 87986,
+      "UserId": 4,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 16,
+      "Name": "Loan",
+      "Balance": 31645,
+      "UserId": 4,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 17,
+      "Name": "Cash",
+      "Balance": 56,
+      "UserId": 5,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 18,
+      "Name": "Debit cards",
+      "Balance": 2566,
+      "UserId": 5,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 19,
+      "Name": "Bank account",
+      "Balance": 5254,
+      "UserId": 5,
+      "User": null,
+      "Transactions": []
+    },
+    {
+      "AssetId": 20,
+      "Name": "Loan",
+      "Balance": 8787,
+      "UserId": 5,
+      "User": null,
+      "Transactions": []
+    }
+  ],
+
+  "Categories": [
+    {
+      "CategoryId": 1,
+      "IsIncome": true,
+      "Name": "Salary",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 2,
+      "IsIncome": true,
+      "Name": "Bonus",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 3,
+      "IsIncome": true,
+      "Name": "Petty cash",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 4,
+      "IsIncome": false,
+      "Name": "Food",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 5,
+      "IsIncome": false,
+      "Name": "Social Life",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 6,
+      "IsIncome": false,
+      "Name": "Self-development",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 7,
+      "IsIncome": false,
+      "Name": "Culture",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 8,
+      "IsIncome": false,
+      "Name": "Transportation",
+      "Color": 2309453,
+      "ParentId": null,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 9,
+      "IsIncome": false,
+      "Name": "Public transport",
+      "Color": 2309453,
+      "ParentId": 8,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    },
+    {
+      "CategoryId": 10,
+      "IsIncome": false,
+      "Name": "Taxi",
+      "Color": 2309453,
+      "ParentId": 8,
+      "Parent": null,
+      "Children": [],
+      "Transactions": []
+    }
+  ],
+
+  "Transactions": [
+    {
+      "TransactionId": 1,
+      "Amount": 56,
+      "Date": "11.02.2021",
+      "Comment": "MusicGlobal",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 1,
+      "Asset": null
+    },
+    {
+      "TransactionId": 2,
+      "Amount": 14,
+      "Date": "17.02.2021",
+      "Comment": "ElementSquare",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 2,
+      "Asset": null
+    },
+    {
+      "TransactionId": 3,
+      "Amount": 77,
+      "Date": "08.02.2021",
+      "Comment": "DollGlobal",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 3,
+      "Asset": null
+    },
+    {
+      "TransactionId": 4,
+      "Amount": 90,
+      "Date": "19.06.2020",
+      "Comment": "PrioritySquare",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 4,
+      "Asset": null
+    },
+    {
+      "TransactionId": 5,
+      "Amount": 439,
+      "Date": "11.03.2020",
+      "Comment": "ChefMusic",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 5,
+      "Asset": null
+    },
+    {
+      "TransactionId": 6,
+      "Amount": 521,
+      "Date": "04.12.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 6,
+      "Asset": null
+    },
+    {
+      "TransactionId": 7,
+      "Amount": 547,
+      "Date": "19.05.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 7,
+      "Asset": null
+    },
+    {
+      "TransactionId": 8,
+      "Amount": 992,
+      "Date": "06.02.2021",
+      "Comment": "Rokataron",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 8,
+      "Asset": null
+    },
+    {
+      "TransactionId": 9,
+      "Amount": 23,
+      "Date": "09.10.2020",
+      "Comment": "Ronpha",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 9,
+      "Asset": null
+    },
+    {
+      "TransactionId": 10,
+      "Amount": 565,
+      "Date": "22.05.2020",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 1,
+      "Category": null,
+      "AssetId": 10,
+      "Asset": null
+    },
+    {
+      "TransactionId": 11,
+      "Amount": 54,
+      "Date": "24.02.2021",
+      "Comment": "TheaterCompass",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 11,
+      "Asset": null
+    },
+    {
+      "TransactionId": 12,
+      "Amount": 448,
+      "Date": "30.11.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 12,
+      "Asset": null
+    },
+    {
+      "TransactionId": 13,
+      "Amount": 126,
+      "Date": "22.07.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 13,
+      "Asset": null
+    },
+    {
+      "TransactionId": 14,
+      "Amount": 843,
+      "Date": "19.03.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 14,
+      "Asset": null
+    },
+    {
+      "TransactionId": 15,
+      "Amount": 231,
+      "Date": "13.12.2020",
+      "Comment": "TheaterCompass",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 15,
+      "Asset": null
+    },
+    {
+      "TransactionId": 16,
+      "Amount": 108,
+      "Date": "30.03.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 16,
+      "Asset": null
+    },
+    {
+      "TransactionId": 17,
+      "Amount": 977,
+      "Date": "03.02.2021",
+      "Comment": "ElementSquare",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 17,
+      "Asset": null
+    },
+    {
+      "TransactionId": 18,
+      "Amount": 168,
+      "Date": "12.03.2020",
+      "Comment": "ChefMusic",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 18,
+      "Asset": null
+    },
+    {
+      "TransactionId": 19,
+      "Amount": 294,
+      "Date": "11.01.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 19,
+      "Asset": null
+    },
+    {
+      "TransactionId": 20,
+      "Amount": 388,
+      "Date": "10.02.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 2,
+      "Category": null,
+      "AssetId": 20,
+      "Asset": null
+    },
+    {
+      "TransactionId": 21,
+      "Amount": 864,
+      "Date": "14.09.2020",
+      "Comment": "Rokataron",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 1,
+      "Asset": null
+    },
+    {
+      "TransactionId": 22,
+      "Amount": 539,
+      "Date": "25.12.2020",
+      "Comment": "TheaterCompass",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 2,
+      "Asset": null
+    },
+    {
+      "TransactionId": 23,
+      "Amount": 187,
+      "Date": "02.12.2020",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 3,
+      "Asset": null
+    },
+    {
+      "TransactionId": 24,
+      "Amount": 815,
+      "Date": "13.01.2021",
+      "Comment": "ElementSquare",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 4,
+      "Asset": null
+    },
+    {
+      "TransactionId": 25,
+      "Amount": 967,
+      "Date": "04.01.2021",
+      "Comment": "Tonlaron",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 5,
+      "Asset": null
+    },
+    {
+      "TransactionId": 26,
+      "Amount": 208,
+      "Date": "19.07.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 6,
+      "Asset": null
+    },
+    {
+      "TransactionId": 27,
+      "Amount": 670,
+      "Date": "31.01.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 7,
+      "Asset": null
+    },
+    {
+      "TransactionId": 28,
+      "Amount": 290,
+      "Date": "15.08.2020",
+      "Comment": "ChefMusic",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 8,
+      "Asset": null
+    },
+    {
+      "TransactionId": 29,
+      "Amount": 668,
+      "Date": "26.02.2021",
+      "Comment": "TheaterCompass",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 9,
+      "Asset": null
+    },
+    {
+      "TransactionId": 30,
+      "Amount": 533,
+      "Date": "18.02.2020",
+      "Comment": "Rokataron",
+      "CategoryId": 3,
+      "Category": null,
+      "AssetId": 10,
+      "Asset": null
+    },
+    {
+      "TransactionId": 31,
+      "Amount": 969,
+      "Date": "15.09.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 11,
+      "Asset": null
+    },
+    {
+      "TransactionId": 32,
+      "Amount": 889,
+      "Date": "10.02.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 12,
+      "Asset": null
+    },
+    {
+      "TransactionId": 33,
+      "Amount": 819,
+      "Date": "11.11.2020",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 13,
+      "Asset": null
+    },
+    {
+      "TransactionId": 34,
+      "Amount": 127,
+      "Date": "04.01.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 14,
+      "Asset": null
+    },
+    {
+      "TransactionId": 35,
+      "Amount": 136,
+      "Date": "19.02.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 15,
+      "Asset": null
+    },
+    {
+      "TransactionId": 36,
+      "Amount": 821,
+      "Date": "10.05.2020",
+      "Comment": "ElementSquare",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 16,
+      "Asset": null
+    },
+    {
+      "TransactionId": 37,
+      "Amount": 752,
+      "Date": "21.08.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 17,
+      "Asset": null
+    },
+    {
+      "TransactionId": 38,
+      "Amount": 592,
+      "Date": "14.01.2021",
+      "Comment": "SundayTops",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 18,
+      "Asset": null
+    },
+    {
+      "TransactionId": 39,
+      "Amount": 693,
+      "Date": "24.01.2021",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 19,
+      "Asset": null
+    },
+    {
+      "TransactionId": 40,
+      "Amount": 902,
+      "Date": "23.01.2021",
+      "Comment": "ChefMusic",
+      "CategoryId": 4,
+      "Category": null,
+      "AssetId": 20,
+      "Asset": null
+    },
+    {
+      "TransactionId": 41,
+      "Amount": 214,
+      "Date": "01.03.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 1,
+      "Asset": null
+    },
+    {
+      "TransactionId": 42,
+      "Amount": 32,
+      "Date": "12.06.2020",
+      "Comment": "Phamiron",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 2,
+      "Asset": null
+    },
+    {
+      "TransactionId": 43,
+      "Amount": 579,
+      "Date": "12.04.2020",
+      "Comment": "Larokata",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 3,
+      "Asset": null
+    },
+    {
+      "TransactionId": 44,
+      "Amount": 305,
+      "Date": "04.05.2020",
+      "Comment": "RobustArrakis",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 4,
+      "Asset": null
+    },
+    {
+      "TransactionId": 45,
+      "Amount": 554,
+      "Date": "04.12.2020",
+      "Comment": "RobustArrakis",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 5,
+      "Asset": null
+    },
+    {
+      "TransactionId": 46,
+      "Amount": 838,
+      "Date": "19.07.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 6,
+      "Asset": null
+    },
+    {
+      "TransactionId": 47,
+      "Amount": 673,
+      "Date": "29.07.2020",
+      "Comment": "Rokataron",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 7,
+      "Asset": null
+    },
+    {
+      "TransactionId": 48,
+      "Amount": 533,
+      "Date": "01.03.2021",
+      "Comment": "Tonlaron",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 8,
+      "Asset": null
+    },
+    {
+      "TransactionId": 49,
+      "Amount": 299,
+      "Date": "29.09.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 9,
+      "Asset": null
+    },
+    {
+      "TransactionId": 50,
+      "Amount": 184,
+      "Date": "16.05.2020",
+      "Comment": "Larokata",
+      "CategoryId": 5,
+      "Category": null,
+      "AssetId": 10,
+      "Asset": null
+    },
+    {
+      "TransactionId": 51,
+      "Amount": 355,
+      "Date": "03.01.2021",
+      "Comment": "Phamiron",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 11,
+      "Asset": null
+    },
+    {
+      "TransactionId": 52,
+      "Amount": 614,
+      "Date": "26.01.2020",
+      "Comment": "RobustArrakis",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 12,
+      "Asset": null
+    },
+    {
+      "TransactionId": 53,
+      "Amount": 442,
+      "Date": "04.08.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 13,
+      "Asset": null
+    },
+    {
+      "TransactionId": 54,
+      "Amount": 955,
+      "Date": "08.04.2020",
+      "Comment": "ElementSquare",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 14,
+      "Asset": null
+    },
+    {
+      "TransactionId": 55,
+      "Amount": 264,
+      "Date": "20.10.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 15,
+      "Asset": null
+    },
+    {
+      "TransactionId": 56,
+      "Amount": 420,
+      "Date": "12.08.2020",
+      "Comment": "Larokata",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 16,
+      "Asset": null
+    },
+    {
+      "TransactionId": 57,
+      "Amount": 766,
+      "Date": "05.04.2020",
+      "Comment": "Phamiron",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 17,
+      "Asset": null
+    },
+    {
+      "TransactionId": 58,
+      "Amount": 625,
+      "Date": "26.07.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 18,
+      "Asset": null
+    },
+    {
+      "TransactionId": 59,
+      "Amount": 609,
+      "Date": "17.08.2020",
+      "Comment": "ChefMusic",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 19,
+      "Asset": null
+    },
+    {
+      "TransactionId": 60,
+      "Amount": 599,
+      "Date": "26.02.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 6,
+      "Category": null,
+      "AssetId": 20,
+      "Asset": null
+    },
+    {
+      "TransactionId": 61,
+      "Amount": 972,
+      "Date": "23.09.2020",
+      "Comment": "ElementSquare",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 1,
+      "Asset": null
+    },
+    {
+      "TransactionId": 62,
+      "Amount": 880,
+      "Date": "30.07.2020",
+      "Comment": "Rokataron",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 2,
+      "Asset": null
+    },
+    {
+      "TransactionId": 63,
+      "Amount": 356,
+      "Date": "16.08.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 3,
+      "Asset": null
+    },
+    {
+      "TransactionId": 64,
+      "Amount": 210,
+      "Date": "21.06.2020",
+      "Comment": "TheaterCompass",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 4,
+      "Asset": null
+    },
+    {
+      "TransactionId": 65,
+      "Amount": 651,
+      "Date": "31.03.2020",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 5,
+      "Asset": null
+    },
+    {
+      "TransactionId": 66,
+      "Amount": 753,
+      "Date": "06.08.2020",
+      "Comment": "RobustArrakis",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 6,
+      "Asset": null
+    },
+    {
+      "TransactionId": 67,
+      "Amount": 269,
+      "Date": "16.03.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 7,
+      "Asset": null
+    },
+    {
+      "TransactionId": 68,
+      "Amount": 612,
+      "Date": "13.09.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 8,
+      "Asset": null
+    },
+    {
+      "TransactionId": 69,
+      "Amount": 461,
+      "Date": "05.06.2020",
+      "Comment": "RobustArrakis",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 9,
+      "Asset": null
+    },
+    {
+      "TransactionId": 70,
+      "Amount": 175,
+      "Date": "19.05.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 7,
+      "Category": null,
+      "AssetId": 10,
+      "Asset": null
+    },
+    {
+      "TransactionId": 71,
+      "Amount": 40,
+      "Date": "08.05.2020",
+      "Comment": "ElementSquare",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 11,
+      "Asset": null
+    },
+    {
+      "TransactionId": 72,
+      "Amount": 773,
+      "Date": "01.11.2020",
+      "Comment": "Larokata",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 12,
+      "Asset": null
+    },
+    {
+      "TransactionId": 73,
+      "Amount": 259,
+      "Date": "17.01.2021",
+      "Comment": "Rokataron",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 13,
+      "Asset": null
+    },
+    {
+      "TransactionId": 74,
+      "Amount": 674,
+      "Date": "23.02.2021",
+      "Comment": "KnightForward",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 14,
+      "Asset": null
+    },
+    {
+      "TransactionId": 75,
+      "Amount": 703,
+      "Date": "01.01.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 15,
+      "Asset": null
+    },
+    {
+      "TransactionId": 76,
+      "Amount": 551,
+      "Date": "25.10.2020",
+      "Comment": "MatCoast",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 16,
+      "Asset": null
+    },
+    {
+      "TransactionId": 77,
+      "Amount": 499,
+      "Date": "28.09.2020",
+      "Comment": "MatCoast",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 17,
+      "Asset": null
+    },
+    {
+      "TransactionId": 78,
+      "Amount": 989,
+      "Date": "23.01.2021",
+      "Comment": "ChefMusic",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 18,
+      "Asset": null
+    },
+    {
+      "TransactionId": 79,
+      "Amount": 132,
+      "Date": "12.09.2020",
+      "Comment": "TheaterCompass",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 19,
+      "Asset": null
+    },
+    {
+      "TransactionId": 80,
+      "Amount": 24,
+      "Date": "19.02.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 8,
+      "Category": null,
+      "AssetId": 20,
+      "Asset": null
+    },
+    {
+      "TransactionId": 81,
+      "Amount": 788,
+      "Date": "10.08.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 1,
+      "Asset": null
+    },
+    {
+      "TransactionId": 82,
+      "Amount": 186,
+      "Date": "05.09.2020",
+      "Comment": "ChefMusic",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 2,
+      "Asset": null
+    },
+    {
+      "TransactionId": 83,
+      "Amount": 635,
+      "Date": "04.11.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 3,
+      "Asset": null
+    },
+    {
+      "TransactionId": 84,
+      "Amount": 465,
+      "Date": "04.03.2020",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 4,
+      "Asset": null
+    },
+    {
+      "TransactionId": 85,
+      "Amount": 1839,
+      "Date": "27.05.2020",
+      "Comment": "Phamiron",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 5,
+      "Asset": null
+    },
+    {
+      "TransactionId": 86,
+      "Amount": 1621,
+      "Date": "14.08.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 6,
+      "Asset": null
+    },
+    {
+      "TransactionId": 87,
+      "Amount": 474,
+      "Date": "14.12.2020",
+      "Comment": "Larokata",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 7,
+      "Asset": null
+    },
+    {
+      "TransactionId": 88,
+      "Amount": 519,
+      "Date": "28.10.2020",
+      "Comment": "TheaterCompass",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 8,
+      "Asset": null
+    },
+    {
+      "TransactionId": 89,
+      "Amount": 170,
+      "Date": "26.06.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 9,
+      "Asset": null
+    },
+    {
+      "TransactionId": 90,
+      "Amount": 1129,
+      "Date": "21.08.2020",
+      "Comment": "Carouselot",
+      "CategoryId": 9,
+      "Category": null,
+      "AssetId": 10,
+      "Asset": null
+    },
+    {
+      "TransactionId": 91,
+      "Amount": 1290,
+      "Date": "21.12.2020",
+      "Comment": "SundayTops",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 11,
+      "Asset": null
+    },
+    {
+      "TransactionId": 92,
+      "Amount": 146,
+      "Date": "12.07.2020",
+      "Comment": "KnightForward",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 12,
+      "Asset": null
+    },
+    {
+      "TransactionId": 93,
+      "Amount": 1273,
+      "Date": "03.07.2020",
+      "Comment": "Rokataron",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 13,
+      "Asset": null
+    },
+    {
+      "TransactionId": 94,
+      "Amount": 298,
+      "Date": "26.08.2020",
+      "Comment": "ChefMusic",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 14,
+      "Asset": null
+    },
+    {
+      "TransactionId": 95,
+      "Amount": 1166,
+      "Date": "14.02.2021",
+      "Comment": "TheaterCompass",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 15,
+      "Asset": null
+    },
+    {
+      "TransactionId": 96,
+      "Amount": 639,
+      "Date": "29.11.2020",
+      "Comment": "Tonlaron",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 16,
+      "Asset": null
+    },
+    {
+      "TransactionId": 97,
+      "Amount": 789,
+      "Date": "20.08.2020",
+      "Comment": "MatCoast",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 17,
+      "Asset": null
+    },
+    {
+      "TransactionId": 98,
+      "Amount": 706,
+      "Date": "01.03.2021",
+      "Comment": "Phamiron",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 18,
+      "Asset": null
+    },
+    {
+      "TransactionId": 99,
+      "Amount": 1123,
+      "Date": "09.01.2020",
+      "Comment": "ElementSquare",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 19,
+      "Asset": null
+    },
+    {
+      "TransactionId": 100,
+      "Amount": 160,
+      "Date": "31.10.2020",
+      "Comment": "SnowflakesGem",
+      "CategoryId": 10,
+      "Category": null,
+      "AssetId": 20,
+      "Asset": null
+    }
+  ]
+
+}
