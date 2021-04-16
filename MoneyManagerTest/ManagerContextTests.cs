@@ -17,52 +17,46 @@ namespace MoneyManagerTest
         public void Setup()
         {
             var builder = new ConfigurationBuilder();
-            builder.SetBasePath(
-                AppDomain.CurrentDomain.BaseDirectory);
-            builder.AddJsonFile("setting.json");
-            var config = builder.Build();
-            string connString = config
-                .GetConnectionString("DefaultConnection");
-            connString = connString.Replace("{0}",
-                AppDomain.CurrentDomain.BaseDirectory);
 
-            var optionsBuilder 
-                = new DbContextOptionsBuilder<ManagerContext>();
-            var options = optionsBuilder
-                .UseSqlite(connString)
-                .Options;
+            builder.SetBasePath(AppDomain.CurrentDomain.BaseDirectory);
+
+            builder.AddJsonFile("setting.json");
+
+            var config = builder.Build();
+
+            string connString = config.GetConnectionString("DefaultConnection");
+
+            connString = string.Format(connString, AppDomain.CurrentDomain.BaseDirectory);
+
+            var optionsBuilder = new DbContextOptionsBuilder<ManagerContext>();
+
+            var options = optionsBuilder.UseSqlite(connString).Options;
 
             context = new ManagerContext(options);
-            // Assert.NotNull(context);
         }
 
         [Test]
         public void UserCreateUpdateDelete()
         {
-            var user = new User(
-                "Lohan A. Kern", 
-                "volf@rain.tr");
+            var user = new User("Lohan A. Kern", "volf@rain.tr");
 
-            EntityEntry<User> entity = context.Users
-                .Add(user);
-            Assert.AreEqual(
-                EntityState.Added, 
-                entity.State);
+            EntityEntry<User> entity = context.Users.Add(user);
+
+            Assert.AreEqual(EntityState.Added, entity.State);
+
             context.SaveChanges();
 
             user.Name = "Logan A. Kern";
-            entity = context.Users
-                .Update(user);
-            Assert.AreEqual(
-                EntityState.Modified, 
-                entity.State);
+            entity = context.Users.Update(user);
+
+            Assert.AreEqual(EntityState.Modified, entity.State);
+
             context.SaveChanges();
 
-            entity = context.Users
-                .Remove(user);
-            Assert.AreEqual(
-                EntityState.Deleted, 
-                entity.State);
+            entity = context.Users.Remove(user);
+
+            Assert.AreEqual(EntityState.Deleted, entity.State);
+
             context.SaveChanges();
         }
 
@@ -71,26 +65,23 @@ namespace MoneyManagerTest
         {
             var asset = new Asset("Money", 487, 1);
 
-            EntityEntry<Asset> entity
-                = context.Assets.Add(asset);
-            Assert.AreEqual(
-                EntityState.Added, 
-                entity.State);
+            EntityEntry<Asset> entity = context.Assets.Add(asset);
+
+            Assert.AreEqual(EntityState.Added, entity.State);
+
             context.SaveChanges();
 
             asset.Name = "PayPal";
-            entity = context.Assets
-                .Update(asset);
-            Assert.AreEqual(
-                EntityState.Modified, 
-                entity.State);
+            entity = context.Assets.Update(asset);
+
+            Assert.AreEqual(EntityState.Modified, entity.State);
+
             context.SaveChanges();
 
-            entity = context.Assets
-                .Remove(asset);
-            Assert.AreEqual(
-                EntityState.Deleted, 
-                entity.State);
+            entity = context.Assets.Remove(asset);
+
+            Assert.AreEqual(EntityState.Deleted, entity.State);
+
             context.SaveChanges();
         }
 
@@ -99,59 +90,48 @@ namespace MoneyManagerTest
         {
             var category = new Category(false, "Cinma");
 
-            EntityEntry<Category> entity
-                = context.Categories.Add(category);
-            Assert.AreEqual(
-                EntityState.Added, 
-                entity.State);
+            EntityEntry<Category> entity = context.Categories.Add(category);
+
+            Assert.AreEqual(EntityState.Added, entity.State);
+
             context.SaveChanges();
 
             category.Name = "Cinema";
-            entity = context.Categories
-                .Update(category);
-            Assert.AreEqual(
-                EntityState.Modified, 
-                entity.State);
+            entity = context.Categories.Update(category);
+
+            Assert.AreEqual(EntityState.Modified, entity.State);
+
             context.SaveChanges();
 
-            entity = context.Categories
-                .Remove(category);
-            Assert.AreEqual(
-                EntityState.Deleted, 
-                entity.State);
+            entity = context.Categories.Remove(category);
+
+            Assert.AreEqual(EntityState.Deleted, entity.State);
+
             context.SaveChanges();
         }
 
         [Test]
         public void TransactionCreateUpdateDelete()
         {
-            var transaction 
-                = new Transaction(
-                33, new DateTime(), 
-                "Valley of Dreams",
-                2, 2);
+            var transaction = new Transaction(33, new DateTime(), "Valley of Dreams", 2, 2);
 
-            EntityEntry<Transaction> entity
-                = context.Transactions
-                .Add(transaction);
-            Assert.AreEqual(
-                EntityState.Added, 
-                entity.State);
+            EntityEntry<Transaction> entity = context.Transactions.Add(transaction);
+
+            Assert.AreEqual(EntityState.Added, entity.State);
+
             context.SaveChanges();
 
             transaction.Comment = "Cinema";
-            entity = context.Transactions
-                .Update(transaction);
-            Assert.AreEqual(
-                EntityState.Modified, 
-                entity.State);
+            entity = context.Transactions.Update(transaction);
+
+            Assert.AreEqual(EntityState.Modified, entity.State);
+
             context.SaveChanges();
 
-            entity = context.Transactions
-                .Remove(transaction);
-            Assert.AreEqual(
-                EntityState.Deleted, 
-                entity.State);
+            entity = context.Transactions.Remove(transaction);
+
+            Assert.AreEqual(EntityState.Deleted, entity.State);
+
             context.SaveChanges();
         }
 
@@ -220,36 +200,27 @@ namespace MoneyManagerTest
         {
             var id = 1;
 
-            var transaction 
-                = new Transaction(
-                33, DateTime.Now, 
-                "Valley of Dreams",
-                2, 2);
-            EntityEntry<Transaction> entity
-                = context.Transactions
-                .Add(transaction);
-            Assert.AreEqual(
-                EntityState.Added, 
-                entity.State);
+            var transaction = new Transaction(33, DateTime.Now, "Valley of Dreams", 2, 2);
+
+            EntityEntry<Transaction> entity = context.Transactions.Add(transaction);
+
+            Assert.AreEqual(EntityState.Added, entity.State);
+
             context.SaveChanges();
 
             var transactions = context.Transactions
-                .Where(t => (t.Asset.UserId == id &&
-                t.Date.Year == DateTime.Now.Year &&
-                t.Date.Month == DateTime.Now.Month))
+                .Where(t => (t.Asset.UserId == id && t.Date.Year == DateTime.Now.Year 
+                            && t.Date.Month == DateTime.Now.Month))
                 .ToList();
 
             Assert.NotNull(transactions);
-            Assert.GreaterOrEqual(
-                transactions.Count, 1);
+            Assert.GreaterOrEqual(transactions.Count, 1);
 
             foreach (var trans in transactions)
             {
-                entity = context.Transactions
-                    .Remove(trans);
-                Assert.AreEqual(
-                    EntityState.Deleted, 
-                    entity.State);
+                entity = context.Transactions.Remove(trans);
+
+                Assert.AreEqual(EntityState.Deleted, entity.State);
             }
 
             context.SaveChanges();
@@ -269,16 +240,10 @@ namespace MoneyManagerTest
                          }).ToList();
 
             Assert.NotNull(users);
-            Assert.GreaterOrEqual(
-                users.Count, 5);
-            Assert.AreEqual(
-                1, users[0].UserId);
-            Assert.AreEqual(
-                "Clyde E. Troia", 
-                users[0].Name);
-            Assert.AreEqual(
-                "ClydeETroia@dayrep.com", 
-                users[0].Email);
+            Assert.GreaterOrEqual(users.Count, 5);
+            Assert.AreEqual(1, users[0].UserId);
+            Assert.AreEqual("Clyde E. Troia", users[0].Name);
+            Assert.AreEqual("ClydeETroia@dayrep.com", users[0].Email);
         }
 
         [Test]
@@ -294,20 +259,13 @@ namespace MoneyManagerTest
                             u.UserId,
                             u.Name,
                             u.Email,
-                            Balance = u.Assets
-                            .Sum(a => a.Balance)
-
+                            Balance = u.Assets.Sum(a => a.Balance)
                         }).FirstOrDefault();
 
             Assert.NotNull(user);
-            Assert.AreEqual(
-                "Clyde E. Troia", 
-                user.Name);
-            Assert.AreEqual(
-                "ClydeETroia@dayrep.com", 
-                user.Email);
-            Assert.AreEqual(
-                21033, user.Balance);
+            Assert.AreEqual("Clyde E. Troia", user.Name);
+            Assert.AreEqual("ClydeETroia@dayrep.com", user.Email);
+            Assert.AreEqual(21033, user.Balance);
         }
 
         [Test]
@@ -327,15 +285,10 @@ namespace MoneyManagerTest
                           }).ToList();
 
             Assert.NotNull(assets);
-            Assert.GreaterOrEqual(
-                assets.Count, 4);
-            Assert.AreEqual(
-                3, assets[0].AssetId);
-            Assert.AreEqual(
-                "Bank account", 
-                assets[0].Name);
-            Assert.AreEqual(
-                7854, assets[0].Balance);
+            Assert.GreaterOrEqual(assets.Count, 4);
+            Assert.AreEqual(3, assets[0].AssetId);
+            Assert.AreEqual("Bank account", assets[0].Name);
+            Assert.AreEqual(7854, assets[0].Balance);
         }
 
         [Test]
@@ -344,44 +297,30 @@ namespace MoneyManagerTest
             var id = 1;
 
             var transactions = (from t
-                               in context.Transactions
-                               where t.Asset.UserId == id
-                               orderby t.Date descending, 
-                                       t.Asset.Name, 
-                                       t.Category.Name
-                               select new
-                               {
-                                   t.TransactionId,
-                                   Asset = t.Asset.Name,
-                                   Category = t.Category.Name,
-                                   ParentCategory = t.Category
-                                                     .Parent
-                                                     .Name,
-                                   t.Amount,
-                                   t.Date,
-                                   t.Comment
-                               }).ToList();
+                                in context.Transactions
+                                where t.Asset.UserId == id
+                                orderby t.Date descending, 
+                                        t.Asset.Name, 
+                                        t.Category.Name
+                                select new
+                                {
+                                    t.TransactionId,
+                                    Asset = t.Asset.Name,
+                                    Category = t.Category.Name,
+                                    ParentCategory = t.Category.Parent.Name,
+                                    t.Amount,
+                                    t.Date,
+                                    t.Comment
+                                }).ToList();
 
             Assert.NotNull(transactions);
-            Assert.GreaterOrEqual(
-                transactions.Count, 20);
-            Assert.AreEqual(
-                "Debit cards", 
-                transactions[0].Asset);
-            Assert.AreEqual(
-                "Salary", 
-                transactions[0].Category);
-            Assert.AreEqual(
-                null, 
-                transactions[0].ParentCategory);
-            Assert.AreEqual(
-                14, transactions[0].Amount);
-            Assert.AreEqual(
-                new DateTime(2021, 2, 17), 
-                transactions[0].Date);
-            Assert.AreEqual(
-                "ElementSquare", 
-                transactions[0].Comment);
+            Assert.GreaterOrEqual(transactions.Count, 20);
+            Assert.AreEqual("Debit cards", transactions[0].Asset);
+            Assert.AreEqual("Salary", transactions[0].Category);
+            Assert.Null(transactions[0].ParentCategory);
+            Assert.AreEqual(14, transactions[0].Amount);
+            Assert.AreEqual(new DateTime(2021, 2, 17), transactions[0].Date);
+            Assert.AreEqual("ElementSquare",transactions[0].Comment);
         }
 
         [Test]
@@ -405,29 +344,19 @@ namespace MoneyManagerTest
                     Month = g.Key,
                     g.First().Date.Year,
                                 
-                    Income = g
-                    .Where(t => t.Category
-                                 .IsIncome)
-                    .Sum(t => t.Amount),
+                    Income = g.Where(t => t.Category.IsIncome)
+                              .Sum(t => t.Amount),
 
-                    Expenses = g
-                    .Where(t => !t.Category
-                                  .IsIncome)
-                    .Sum(t => t.Amount)
+                    Expenses = g.Where(t => !t.Category.IsIncome)
+                                .Sum(t => t.Amount)
                 }).ToList();
 
             Assert.NotNull(money);
-            Assert.GreaterOrEqual(
-                money.Count, 9);
-            Assert.AreEqual(
-                3, money[0].Month);
-            Assert.AreEqual(
-                2020, money[0].Year);
-            Assert.AreEqual(
-                0, money[0].Income);
-            Assert.AreEqual(
-                214 + 465, 
-                money[0].Expenses);
+            Assert.GreaterOrEqual(money.Count, 9);
+            Assert.AreEqual(3, money[0].Month);
+            Assert.AreEqual(2020, money[0].Year);
+            Assert.AreEqual(0, money[0].Income);
+            Assert.AreEqual(679, money[0].Expenses);
         }
 
         [Test]
@@ -438,11 +367,8 @@ namespace MoneyManagerTest
 
             var amount = context.Transactions
                 .Include(t => t.Category)
-                .Where(t => (t.Asset.UserId == id)
-                 && (t.Category.IsIncome == isIncome)
-                 && (t.Category.ParentId == null)
-                 && (t.Date.Year == 2020)
-                 && (t.Date.Month == 4))
+                .Where(t => (t.Asset.UserId == id) && (t.Category.IsIncome == isIncome) 
+                            && (t.Category.ParentId == null) && (t.Date.Year == 2020) && (t.Date.Month == 4))
                 .AsEnumerable()
                 .GroupBy(t => t.Category)
                 .Select(g => new
@@ -455,13 +381,9 @@ namespace MoneyManagerTest
                 .ToList();
 
             Assert.NotNull(amount);
-            Assert.GreaterOrEqual(
-                amount.Count, 1);
-            Assert.AreEqual(
-                "Social Life", 
-                amount[0].Category);
-            Assert.AreEqual(
-                579, amount[0].Amount);
+            Assert.GreaterOrEqual(amount.Count, 1);
+            Assert.AreEqual("Social Life", amount[0].Category);
+            Assert.AreEqual(579, amount[0].Amount);
         }
 
         [Test]
@@ -474,9 +396,7 @@ namespace MoneyManagerTest
                 .FirstOrDefault();
 
             Assert.NotNull(category);
-            Assert.AreEqual(
-                2309453, 
-                category.Color);
+            Assert.AreEqual(2309453, category.Color);
         }
 
         [TearDown]

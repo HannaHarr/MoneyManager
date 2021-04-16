@@ -187,7 +187,9 @@ namespace MoneyManagerModel.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Color")
-                        .HasColumnType("INTEGER");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(2309453);
 
                     b.Property<bool>("IsIncome")
                         .HasColumnType("INTEGER");

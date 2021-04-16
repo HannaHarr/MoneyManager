@@ -9,8 +9,8 @@ using MoneyManagerModel;
 namespace MoneyManagerModel.Migrations
 {
     [DbContext(typeof(ManagerContext))]
-    [Migration("20210412092147_InitialData")]
-    partial class InitialData
+    [Migration("20210416144250_CategoryColor")]
+    partial class CategoryColor
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -188,6 +188,11 @@ namespace MoneyManagerModel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("Color")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(2309453);
+
                     b.Property<bool>("IsIncome")
                         .HasColumnType("INTEGER");
 
@@ -207,54 +212,63 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             CategoryId = 1,
+                            Color = 2309453,
                             IsIncome = true,
                             Name = "Salary"
                         },
                         new
                         {
                             CategoryId = 2,
+                            Color = 2309453,
                             IsIncome = true,
                             Name = "Bonus"
                         },
                         new
                         {
                             CategoryId = 3,
+                            Color = 2309453,
                             IsIncome = true,
                             Name = "Petty cash"
                         },
                         new
                         {
                             CategoryId = 4,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Food"
                         },
                         new
                         {
                             CategoryId = 5,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Social Life"
                         },
                         new
                         {
                             CategoryId = 6,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Self-development"
                         },
                         new
                         {
                             CategoryId = 7,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Culture"
                         },
                         new
                         {
                             CategoryId = 8,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Transportation"
                         },
                         new
                         {
                             CategoryId = 9,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Public transport",
                             ParentId = 8
@@ -262,6 +276,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             CategoryId = 10,
+                            Color = 2309453,
                             IsIncome = false,
                             Name = "Taxi",
                             ParentId = 8
@@ -274,8 +289,8 @@ namespace MoneyManagerModel.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Amount")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("AssetId")
                         .HasColumnType("INTEGER");
@@ -301,7 +316,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 1,
-                            Amount = 56m,
+                            Amount = 56,
                             AssetId = 1,
                             CategoryId = 1,
                             Comment = "MusicGlobal",
@@ -310,7 +325,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 2,
-                            Amount = 14m,
+                            Amount = 14,
                             AssetId = 2,
                             CategoryId = 1,
                             Comment = "ElementSquare",
@@ -319,7 +334,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 3,
-                            Amount = 77m,
+                            Amount = 77,
                             AssetId = 3,
                             CategoryId = 1,
                             Comment = "DollGlobal",
@@ -328,7 +343,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 4,
-                            Amount = 90m,
+                            Amount = 90,
                             AssetId = 4,
                             CategoryId = 1,
                             Comment = "PrioritySquare",
@@ -337,7 +352,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 5,
-                            Amount = 439m,
+                            Amount = 439,
                             AssetId = 5,
                             CategoryId = 1,
                             Comment = "ChefMusic",
@@ -346,7 +361,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 6,
-                            Amount = 521m,
+                            Amount = 521,
                             AssetId = 6,
                             CategoryId = 1,
                             Comment = "SundayTops",
@@ -355,7 +370,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 7,
-                            Amount = 547m,
+                            Amount = 547,
                             AssetId = 7,
                             CategoryId = 1,
                             Comment = "Tonlaron",
@@ -364,7 +379,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 8,
-                            Amount = 992m,
+                            Amount = 992,
                             AssetId = 8,
                             CategoryId = 1,
                             Comment = "Rokataron",
@@ -373,7 +388,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 9,
-                            Amount = 23m,
+                            Amount = 23,
                             AssetId = 9,
                             CategoryId = 1,
                             Comment = "Ronpha",
@@ -382,7 +397,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 10,
-                            Amount = 565m,
+                            Amount = 565,
                             AssetId = 10,
                             CategoryId = 1,
                             Comment = "SnowflakesGem",
@@ -391,8 +406,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 11,
-                            Amount = 54m,
-                            AssetId = 1,
+                            Amount = 54,
+                            AssetId = 11,
                             CategoryId = 2,
                             Comment = "TheaterCompass",
                             Date = new DateTime(2021, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -400,8 +415,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 12,
-                            Amount = 448m,
-                            AssetId = 2,
+                            Amount = 448,
+                            AssetId = 12,
                             CategoryId = 2,
                             Comment = "Carouselot",
                             Date = new DateTime(2020, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -409,8 +424,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 13,
-                            Amount = 126m,
-                            AssetId = 3,
+                            Amount = 126,
+                            AssetId = 13,
                             CategoryId = 2,
                             Comment = "SundayTops",
                             Date = new DateTime(2020, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -418,8 +433,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 14,
-                            Amount = 843m,
-                            AssetId = 4,
+                            Amount = 843,
+                            AssetId = 14,
                             CategoryId = 2,
                             Comment = "KnightForward",
                             Date = new DateTime(2020, 3, 19, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -427,8 +442,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 15,
-                            Amount = 231m,
-                            AssetId = 5,
+                            Amount = 231,
+                            AssetId = 15,
                             CategoryId = 2,
                             Comment = "TheaterCompass",
                             Date = new DateTime(2020, 12, 13, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -436,8 +451,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 16,
-                            Amount = 108m,
-                            AssetId = 6,
+                            Amount = 108,
+                            AssetId = 16,
                             CategoryId = 2,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -445,8 +460,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 17,
-                            Amount = 977m,
-                            AssetId = 7,
+                            Amount = 977,
+                            AssetId = 17,
                             CategoryId = 2,
                             Comment = "ElementSquare",
                             Date = new DateTime(2021, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -454,8 +469,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 18,
-                            Amount = 168m,
-                            AssetId = 8,
+                            Amount = 168,
+                            AssetId = 18,
                             CategoryId = 2,
                             Comment = "ChefMusic",
                             Date = new DateTime(2020, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -463,8 +478,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 19,
-                            Amount = 294m,
-                            AssetId = 9,
+                            Amount = 294,
+                            AssetId = 19,
                             CategoryId = 2,
                             Comment = "SundayTops",
                             Date = new DateTime(2020, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -472,8 +487,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 20,
-                            Amount = 388m,
-                            AssetId = 10,
+                            Amount = 388,
+                            AssetId = 20,
                             CategoryId = 2,
                             Comment = "Carouselot",
                             Date = new DateTime(2020, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -481,7 +496,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 21,
-                            Amount = 864m,
+                            Amount = 864,
                             AssetId = 1,
                             CategoryId = 3,
                             Comment = "Rokataron",
@@ -490,7 +505,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 22,
-                            Amount = 539m,
+                            Amount = 539,
                             AssetId = 2,
                             CategoryId = 3,
                             Comment = "TheaterCompass",
@@ -499,7 +514,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 23,
-                            Amount = 187m,
+                            Amount = 187,
                             AssetId = 3,
                             CategoryId = 3,
                             Comment = "SnowflakesGem",
@@ -508,7 +523,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 24,
-                            Amount = 815m,
+                            Amount = 815,
                             AssetId = 4,
                             CategoryId = 3,
                             Comment = "ElementSquare",
@@ -517,7 +532,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 25,
-                            Amount = 967m,
+                            Amount = 967,
                             AssetId = 5,
                             CategoryId = 3,
                             Comment = "Tonlaron",
@@ -526,7 +541,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 26,
-                            Amount = 208m,
+                            Amount = 208,
                             AssetId = 6,
                             CategoryId = 3,
                             Comment = "SundayTops",
@@ -535,7 +550,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 27,
-                            Amount = 670m,
+                            Amount = 670,
                             AssetId = 7,
                             CategoryId = 3,
                             Comment = "Carouselot",
@@ -544,7 +559,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 28,
-                            Amount = 290m,
+                            Amount = 290,
                             AssetId = 8,
                             CategoryId = 3,
                             Comment = "ChefMusic",
@@ -553,7 +568,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 29,
-                            Amount = 668m,
+                            Amount = 668,
                             AssetId = 9,
                             CategoryId = 3,
                             Comment = "TheaterCompass",
@@ -562,7 +577,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 30,
-                            Amount = 533m,
+                            Amount = 533,
                             AssetId = 10,
                             CategoryId = 3,
                             Comment = "Rokataron",
@@ -571,8 +586,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 31,
-                            Amount = 969m,
-                            AssetId = 1,
+                            Amount = 969,
+                            AssetId = 11,
                             CategoryId = 4,
                             Comment = "Carouselot",
                             Date = new DateTime(2020, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -580,8 +595,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 32,
-                            Amount = 889m,
-                            AssetId = 2,
+                            Amount = 889,
+                            AssetId = 12,
                             CategoryId = 4,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -589,8 +604,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 33,
-                            Amount = 819m,
-                            AssetId = 3,
+                            Amount = 819,
+                            AssetId = 13,
                             CategoryId = 4,
                             Comment = "SnowflakesGem",
                             Date = new DateTime(2020, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -598,8 +613,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 34,
-                            Amount = 127m,
-                            AssetId = 4,
+                            Amount = 127,
+                            AssetId = 14,
                             CategoryId = 4,
                             Comment = "KnightForward",
                             Date = new DateTime(2020, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -607,8 +622,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 35,
-                            Amount = 136m,
-                            AssetId = 5,
+                            Amount = 136,
+                            AssetId = 15,
                             CategoryId = 4,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -616,8 +631,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 36,
-                            Amount = 821m,
-                            AssetId = 6,
+                            Amount = 821,
+                            AssetId = 16,
                             CategoryId = 4,
                             Comment = "ElementSquare",
                             Date = new DateTime(2020, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -625,8 +640,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 37,
-                            Amount = 752m,
-                            AssetId = 7,
+                            Amount = 752,
+                            AssetId = 17,
                             CategoryId = 4,
                             Comment = "KnightForward",
                             Date = new DateTime(2020, 8, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -634,8 +649,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 38,
-                            Amount = 592m,
-                            AssetId = 8,
+                            Amount = 592,
+                            AssetId = 18,
                             CategoryId = 4,
                             Comment = "SundayTops",
                             Date = new DateTime(2021, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -643,8 +658,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 39,
-                            Amount = 693m,
-                            AssetId = 9,
+                            Amount = 693,
+                            AssetId = 19,
                             CategoryId = 4,
                             Comment = "SnowflakesGem",
                             Date = new DateTime(2021, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -652,8 +667,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 40,
-                            Amount = 902m,
-                            AssetId = 10,
+                            Amount = 902,
+                            AssetId = 20,
                             CategoryId = 4,
                             Comment = "ChefMusic",
                             Date = new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -661,7 +676,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 41,
-                            Amount = 214m,
+                            Amount = 214,
                             AssetId = 1,
                             CategoryId = 5,
                             Comment = "Tonlaron",
@@ -670,7 +685,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 42,
-                            Amount = 32m,
+                            Amount = 32,
                             AssetId = 2,
                             CategoryId = 5,
                             Comment = "Phamiron",
@@ -679,7 +694,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 43,
-                            Amount = 579m,
+                            Amount = 579,
                             AssetId = 3,
                             CategoryId = 5,
                             Comment = "Larokata",
@@ -688,7 +703,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 44,
-                            Amount = 305m,
+                            Amount = 305,
                             AssetId = 4,
                             CategoryId = 5,
                             Comment = "RobustArrakis",
@@ -697,7 +712,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 45,
-                            Amount = 554m,
+                            Amount = 554,
                             AssetId = 5,
                             CategoryId = 5,
                             Comment = "RobustArrakis",
@@ -706,7 +721,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 46,
-                            Amount = 838m,
+                            Amount = 838,
                             AssetId = 6,
                             CategoryId = 5,
                             Comment = "Carouselot",
@@ -715,7 +730,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 47,
-                            Amount = 673m,
+                            Amount = 673,
                             AssetId = 7,
                             CategoryId = 5,
                             Comment = "Rokataron",
@@ -724,7 +739,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 48,
-                            Amount = 533m,
+                            Amount = 533,
                             AssetId = 8,
                             CategoryId = 5,
                             Comment = "Tonlaron",
@@ -733,7 +748,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 49,
-                            Amount = 299m,
+                            Amount = 299,
                             AssetId = 9,
                             CategoryId = 5,
                             Comment = "SundayTops",
@@ -742,7 +757,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 50,
-                            Amount = 184m,
+                            Amount = 184,
                             AssetId = 10,
                             CategoryId = 5,
                             Comment = "Larokata",
@@ -751,8 +766,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 51,
-                            Amount = 355m,
-                            AssetId = 1,
+                            Amount = 355,
+                            AssetId = 11,
                             CategoryId = 6,
                             Comment = "Phamiron",
                             Date = new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -760,8 +775,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 52,
-                            Amount = 614m,
-                            AssetId = 2,
+                            Amount = 614,
+                            AssetId = 12,
                             CategoryId = 6,
                             Comment = "RobustArrakis",
                             Date = new DateTime(2020, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -769,8 +784,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 53,
-                            Amount = 442m,
-                            AssetId = 3,
+                            Amount = 442,
+                            AssetId = 13,
                             CategoryId = 6,
                             Comment = "Carouselot",
                             Date = new DateTime(2020, 8, 4, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -778,8 +793,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 54,
-                            Amount = 955m,
-                            AssetId = 4,
+                            Amount = 955,
+                            AssetId = 14,
                             CategoryId = 6,
                             Comment = "ElementSquare",
                             Date = new DateTime(2020, 4, 8, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -787,8 +802,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 55,
-                            Amount = 264m,
-                            AssetId = 5,
+                            Amount = 264,
+                            AssetId = 15,
                             CategoryId = 6,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -796,8 +811,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 56,
-                            Amount = 420m,
-                            AssetId = 6,
+                            Amount = 420,
+                            AssetId = 16,
                             CategoryId = 6,
                             Comment = "Larokata",
                             Date = new DateTime(2020, 8, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -805,8 +820,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 57,
-                            Amount = 766m,
-                            AssetId = 7,
+                            Amount = 766,
+                            AssetId = 17,
                             CategoryId = 6,
                             Comment = "Phamiron",
                             Date = new DateTime(2020, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -814,8 +829,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 58,
-                            Amount = 625m,
-                            AssetId = 8,
+                            Amount = 625,
+                            AssetId = 18,
                             CategoryId = 6,
                             Comment = "KnightForward",
                             Date = new DateTime(2020, 7, 26, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -823,8 +838,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 59,
-                            Amount = 609m,
-                            AssetId = 9,
+                            Amount = 609,
+                            AssetId = 19,
                             CategoryId = 6,
                             Comment = "ChefMusic",
                             Date = new DateTime(2020, 8, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -832,8 +847,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 60,
-                            Amount = 599m,
-                            AssetId = 10,
+                            Amount = 599,
+                            AssetId = 20,
                             CategoryId = 6,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -841,7 +856,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 61,
-                            Amount = 972m,
+                            Amount = 972,
                             AssetId = 1,
                             CategoryId = 7,
                             Comment = "ElementSquare",
@@ -850,7 +865,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 62,
-                            Amount = 880m,
+                            Amount = 880,
                             AssetId = 2,
                             CategoryId = 7,
                             Comment = "Rokataron",
@@ -859,7 +874,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 63,
-                            Amount = 356m,
+                            Amount = 356,
                             AssetId = 3,
                             CategoryId = 7,
                             Comment = "SundayTops",
@@ -868,7 +883,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 64,
-                            Amount = 210m,
+                            Amount = 210,
                             AssetId = 4,
                             CategoryId = 7,
                             Comment = "TheaterCompass",
@@ -877,7 +892,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 65,
-                            Amount = 651m,
+                            Amount = 651,
                             AssetId = 5,
                             CategoryId = 7,
                             Comment = "SnowflakesGem",
@@ -886,7 +901,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 66,
-                            Amount = 753m,
+                            Amount = 753,
                             AssetId = 6,
                             CategoryId = 7,
                             Comment = "RobustArrakis",
@@ -895,7 +910,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 67,
-                            Amount = 269m,
+                            Amount = 269,
                             AssetId = 7,
                             CategoryId = 7,
                             Comment = "KnightForward",
@@ -904,7 +919,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 68,
-                            Amount = 612m,
+                            Amount = 612,
                             AssetId = 8,
                             CategoryId = 7,
                             Comment = "Tonlaron",
@@ -913,7 +928,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 69,
-                            Amount = 461m,
+                            Amount = 461,
                             AssetId = 9,
                             CategoryId = 7,
                             Comment = "RobustArrakis",
@@ -922,7 +937,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 70,
-                            Amount = 175m,
+                            Amount = 175,
                             AssetId = 10,
                             CategoryId = 7,
                             Comment = "SundayTops",
@@ -931,8 +946,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 71,
-                            Amount = 40m,
-                            AssetId = 1,
+                            Amount = 40,
+                            AssetId = 11,
                             CategoryId = 8,
                             Comment = "ElementSquare",
                             Date = new DateTime(2020, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -940,8 +955,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 72,
-                            Amount = 773m,
-                            AssetId = 2,
+                            Amount = 773,
+                            AssetId = 12,
                             CategoryId = 8,
                             Comment = "Larokata",
                             Date = new DateTime(2020, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -949,8 +964,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 73,
-                            Amount = 259m,
-                            AssetId = 3,
+                            Amount = 259,
+                            AssetId = 13,
                             CategoryId = 8,
                             Comment = "Rokataron",
                             Date = new DateTime(2021, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -958,8 +973,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 74,
-                            Amount = 674m,
-                            AssetId = 4,
+                            Amount = 674,
+                            AssetId = 14,
                             CategoryId = 8,
                             Comment = "KnightForward",
                             Date = new DateTime(2021, 2, 23, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -967,8 +982,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 75,
-                            Amount = 703m,
-                            AssetId = 5,
+                            Amount = 703,
+                            AssetId = 15,
                             CategoryId = 8,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -976,8 +991,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 76,
-                            Amount = 551m,
-                            AssetId = 6,
+                            Amount = 551,
+                            AssetId = 16,
                             CategoryId = 8,
                             Comment = "MatCoast",
                             Date = new DateTime(2020, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -985,8 +1000,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 77,
-                            Amount = 499m,
-                            AssetId = 7,
+                            Amount = 499,
+                            AssetId = 17,
                             CategoryId = 8,
                             Comment = "MatCoast",
                             Date = new DateTime(2020, 9, 28, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -994,8 +1009,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 78,
-                            Amount = 989m,
-                            AssetId = 8,
+                            Amount = 989,
+                            AssetId = 18,
                             CategoryId = 8,
                             Comment = "ChefMusic",
                             Date = new DateTime(2021, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1003,8 +1018,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 79,
-                            Amount = 132m,
-                            AssetId = 9,
+                            Amount = 132,
+                            AssetId = 19,
                             CategoryId = 8,
                             Comment = "TheaterCompass",
                             Date = new DateTime(2020, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1012,8 +1027,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 80,
-                            Amount = 24m,
-                            AssetId = 10,
+                            Amount = 24,
+                            AssetId = 20,
                             CategoryId = 8,
                             Comment = "SundayTops",
                             Date = new DateTime(2020, 2, 19, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1021,7 +1036,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 81,
-                            Amount = 788m,
+                            Amount = 788,
                             AssetId = 1,
                             CategoryId = 9,
                             Comment = "KnightForward",
@@ -1030,7 +1045,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 82,
-                            Amount = 186m,
+                            Amount = 186,
                             AssetId = 2,
                             CategoryId = 9,
                             Comment = "ChefMusic",
@@ -1039,7 +1054,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 83,
-                            Amount = 635m,
+                            Amount = 635,
                             AssetId = 3,
                             CategoryId = 9,
                             Comment = "Tonlaron",
@@ -1048,7 +1063,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 84,
-                            Amount = 465m,
+                            Amount = 465,
                             AssetId = 4,
                             CategoryId = 9,
                             Comment = "SnowflakesGem",
@@ -1057,7 +1072,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 85,
-                            Amount = 1839m,
+                            Amount = 1839,
                             AssetId = 5,
                             CategoryId = 9,
                             Comment = "Phamiron",
@@ -1066,7 +1081,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 86,
-                            Amount = 1621m,
+                            Amount = 1621,
                             AssetId = 6,
                             CategoryId = 9,
                             Comment = "Carouselot",
@@ -1075,7 +1090,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 87,
-                            Amount = 474m,
+                            Amount = 474,
                             AssetId = 7,
                             CategoryId = 9,
                             Comment = "Larokata",
@@ -1084,7 +1099,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 88,
-                            Amount = 519m,
+                            Amount = 519,
                             AssetId = 8,
                             CategoryId = 9,
                             Comment = "TheaterCompass",
@@ -1093,7 +1108,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 89,
-                            Amount = 170m,
+                            Amount = 170,
                             AssetId = 9,
                             CategoryId = 9,
                             Comment = "Tonlaron",
@@ -1102,7 +1117,7 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 90,
-                            Amount = 1129m,
+                            Amount = 1129,
                             AssetId = 10,
                             CategoryId = 9,
                             Comment = "Carouselot",
@@ -1111,8 +1126,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 91,
-                            Amount = 1290m,
-                            AssetId = 1,
+                            Amount = 1290,
+                            AssetId = 11,
                             CategoryId = 10,
                             Comment = "SundayTops",
                             Date = new DateTime(2020, 12, 21, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1120,8 +1135,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 92,
-                            Amount = 146m,
-                            AssetId = 2,
+                            Amount = 146,
+                            AssetId = 12,
                             CategoryId = 10,
                             Comment = "KnightForward",
                             Date = new DateTime(2020, 7, 12, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1129,8 +1144,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 93,
-                            Amount = 1273m,
-                            AssetId = 3,
+                            Amount = 1273,
+                            AssetId = 13,
                             CategoryId = 10,
                             Comment = "Rokataron",
                             Date = new DateTime(2020, 7, 3, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1138,8 +1153,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 94,
-                            Amount = 298m,
-                            AssetId = 4,
+                            Amount = 298,
+                            AssetId = 14,
                             CategoryId = 10,
                             Comment = "ChefMusic",
                             Date = new DateTime(2020, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1147,8 +1162,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 95,
-                            Amount = 1166m,
-                            AssetId = 5,
+                            Amount = 1166,
+                            AssetId = 15,
                             CategoryId = 10,
                             Comment = "TheaterCompass",
                             Date = new DateTime(2021, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1156,8 +1171,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 96,
-                            Amount = 639m,
-                            AssetId = 6,
+                            Amount = 639,
+                            AssetId = 16,
                             CategoryId = 10,
                             Comment = "Tonlaron",
                             Date = new DateTime(2020, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1165,8 +1180,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 97,
-                            Amount = 789m,
-                            AssetId = 7,
+                            Amount = 789,
+                            AssetId = 17,
                             CategoryId = 10,
                             Comment = "MatCoast",
                             Date = new DateTime(2020, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1174,8 +1189,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 98,
-                            Amount = 706m,
-                            AssetId = 8,
+                            Amount = 706,
+                            AssetId = 18,
                             CategoryId = 10,
                             Comment = "Phamiron",
                             Date = new DateTime(2021, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1183,8 +1198,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 99,
-                            Amount = 1123m,
-                            AssetId = 9,
+                            Amount = 1123,
+                            AssetId = 19,
                             CategoryId = 10,
                             Comment = "ElementSquare",
                             Date = new DateTime(2020, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1192,8 +1207,8 @@ namespace MoneyManagerModel.Migrations
                         new
                         {
                             TransactionId = 100,
-                            Amount = 160m,
-                            AssetId = 10,
+                            Amount = 160,
+                            AssetId = 20,
                             CategoryId = 10,
                             Comment = "SnowflakesGem",
                             Date = new DateTime(2020, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified)

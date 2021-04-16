@@ -6,48 +6,35 @@ namespace MoneyManagerModel
 {
     public class Category
     {
-        public int 
-            CategoryId { get; set; }
+        public int CategoryId { get; set; }
 
-        public bool 
-            IsIncome { get; set; }
+        public bool IsIncome { get; set; }
 
-        public string 
-            Name { get; set; }
+        public string Name { get; set; }
 
-        public int 
-            Color { get; set; }
+        public int Color { get; set; }
 
-        public int? 
-            ParentId { get; set; }
+        public int? ParentId { get; set; }
 
-        public Category 
-            Parent { get; set; }
+        public Category Parent { get; set; }
 
-        public ICollection<Category> 
-            Children { get; set; }
+        public ICollection<Category> Children { get; set; }
 
-        public ICollection<Transaction> 
-            Transactions { get; set; }
+        public ICollection<Transaction> Transactions { get; set; }
 
         public Category()
         {
             Color = 2309453;
         }
 
-        public Category(
-            bool isIncome, 
-            string name)
+        public Category(bool isIncome, string name)
         {
             IsIncome = isIncome;
             Name = name;
             Color = 2309453;
         }
 
-        public Category(
-            bool isIncome, 
-            string name, 
-            int parentId)
+        public Category(bool isIncome, string name, int parentId)
         {
             IsIncome = isIncome;
             Name = name;
@@ -55,11 +42,7 @@ namespace MoneyManagerModel
             Color = 2309453;
         }
 
-        public Category(
-            bool isIncome, 
-            string name, 
-            int parentId, 
-            int color)
+        public Category(bool isIncome, string name, int parentId, int color)
         {
             IsIncome = isIncome;
             Name = name;
@@ -68,11 +51,9 @@ namespace MoneyManagerModel
         }
     }
 
-    public class CategoryConfiguration 
-        : IEntityTypeConfiguration<Category>
+    public class CategoryConfiguration : IEntityTypeConfiguration<Category>
     {
-        public void Configure(
-            EntityTypeBuilder<Category> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.Property(c => c.CategoryId)
                 .ValueGeneratedOnAdd();
@@ -87,8 +68,7 @@ namespace MoneyManagerModel
                 .IsRequired()
                 .HasDefaultValue(2309453);
 
-            builder.HasData(
-                InitialData.Categories);
+            builder.HasData(InitialData.Categories);
         }
     }
 }
